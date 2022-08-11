@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pag2</title>
+</head>
+<style type="text/css">
+
+	#header{
+		margin: auto;
+		width: 500px;
+		font-family:Arial;
+	}
+
+	ul,ol{
+		list-style: none;
+	}
+
+	.nav li a{
+		background-color: #000;
+		color: #fff;
+		text-decoration: none;
+		padding: 10px 15px;
+		display: block;
+	}
+
+/*Pasar mouse*/
+	.nav li a:hover{
+		background-color: #434343;
+	}
+
+/* todos los li que esten directos en nav */
+	.nav > li{
+		float: left;
+	}
+
+	.nav li ul{
+		display: none;
+		position: absolute;
+		min-width: 140px;
+	}
+
+	.nav li:hover > ul {
+		display: block;
+	}
+</style>
+<body bgcolor="f1ff29">
+	<div id="header">
+		<ul class="nav">
+			<li><a href="">Inicio</a></li>
+
+			<li><a href="">Act. Anteriores</a>
+				<ul style="margin-left: -40px">
+					<li><a href="Actividad1.html">Act 1</a></li>
+					<li><a href="Actividad2.html">Act 2</a></li>
+					<li><a href="Actividad3.html">Act 3</a></li>
+					<li><a href="Actividad4.html">Act 4</a></li>
+					<li><a href="Actividad5.html">Act 5</a></li>
+					<li><a href="Actividad6.html">Act 6</a></li>
+				</ul>
+			</li>
+
+			<li><a href="https://www.google.com/search?q=acerca+de&source=lmns&bih=750&biw=1536&client=firefox-b-d&hl=es-419&ved=2ahUKEwjqmcXV4fLnAhVPSawKHVR8DEkQ_AUoAHoECAEQAA">Acerca de</a></li>
+
+			<li><a href="https://www.google.com/search?client=firefox-b-d&bih=750&biw=1536&hl=es-419&sxsrf=ALeKk02cvFUxQd-irgs2z-elVBb9prLlNg%3A1582841928414&ei=SEBYXqL1GISIsQXK4bSYBA&q=contacto+&oq=contacto+&gs_l=psy-ab.3..0l10.19374.21016..21228...1.2..0.119.891.6j3......0....1..gws-wiz.....10..0i71j35i362i39j35i39j0i67j0i131j0i20i263j0i131i67.Q9-zauHirzE&ved=0ahUKEwiiuYPX4fLnAhUERKwKHcowDUMQ4dUDCAo&uact=5">Contacto</a></li>
+		</ul>
+	</div>
+</body>
+</html>
