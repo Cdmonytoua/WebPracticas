@@ -1,0 +1,30 @@
+/*body { 
+	background: #000000;
+	color: #fff;
+ }
+*/
+#main{
+ 	width:1160px;
+ }
+
+#seccion{
+	width: 850px;
+	min-height: 200px;
+	margin: 10px;
+	display: inline-block;
+	padding-bottom: 20px;
+}
+
+img{
+	width: 400px;	/*largo*/
+	height: 350px; 	/*ancho*/
+	margin: 10px;
+}
+
+aside{
+	display: inline-block;
+	width: 200px;
+	float: right;
+	margin: 10px;
+}
+

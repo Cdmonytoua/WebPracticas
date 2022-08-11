@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario</title>
+  <link rel="icon" href="LOGO.ico">
+</head>
+<body>
+  <h1>Formulario</h1>
+   
+  <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>">
+  <p>Nombre: <input type="text" name="nombre" size="40"></p>
+  <p>Apellido: <input type="text" name="apellido" size="40"></p>
+  <p>Núm telefonico: <input type="number" name="numero" size="20"> </p>
+  
+    <input type="submit"  name="submit" class="input-48" value="Guardar" id="boton_g">
+        
+    <input type="reset" class="input-48" value="Reset" id="boton_r" required>
+    
+    <?php   
+            if(isset($_POST['submit']))
+            {
+                
+                $id1 = $_POST['nombre'];     
+                $id2 = $_POST['apellido'];     
+                $id3 = $_POST['numero'];
+                
+                require("conexion.php");  
+                $sql="INSERT INTO T_Programa (nombre, apellido, num) VALUES ('id1','id2','id3')";
+
+                if (!$conn) {         
+                    die("Connection failed: " . mysqli_connect_error());     
+                }     
+                else{               
+                    if ($conn->query($sql) === TRUE) {             
+                        echo "<script> alert('Registro guardado');</script>";            
+                    } else {             
+                         echo "<script> alert('Error al registrar datos');</script>";
+                    }     
+                    $conn->close();     
+                }
+            }
+    ?>
+    
+    </form>
+  
+</body>
+</html>
