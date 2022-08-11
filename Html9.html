@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="LOGO.ico">
+	<meta charset="utf-8">
+	<title>Act 9</title>
+
+	<script>
+	function enviar_formulario(){
+		document.formulario.submit()
+		var formulario1 = document.getElementById("my-form");	
+		var dato = formulario1[0];
+		var input = dato.value;
+ 
+	if (dato.value==""){
+		alert("No se envía el formulario");
+		return false;
+	} else {
+		alert("Enviando formulario");
+		alert("Buscando: "+input);
+		formulario1.submit();	
+		return true;
+		}
+	}
+	</script>
+
+</head>
+
+<style type="text/css">
+	
+	#main{
+ 	width:1160px;
+ 	}
+
+	#seccion{
+		width: 850px;
+		min-height: 200px;
+		margin: 10px;
+		display: inline-block;
+		padding-bottom: 20px;
+	}
+
+	img{
+		width: 400px;	/*largo*/
+		height: 350px; 	/*ancho*/
+	}
+
+	aside{
+		display: inline-block;
+		width: 200px;
+		float: right;
+		margin: 10px;
+	}
+
+	#pie{
+	font-size: 10px;
+	text-align: right;
+	}
+
+	#header{
+		margin: auto;
+		width: 500px;
+		font-family:Arial;
+	}
+
+	ul,ol{
+		list-style: none;
+	}
+
+	.nav li a{
+		background-color: #000;
+		color: #fff;
+		text-decoration: none;
+		padding: 10px 15px;
+		display: block;
+	}
+
+/*Pasar mouse*/
+	.nav li a:hover{
+		background-color: #434343;
+	}
+
+/* todos los li que esten directos en nav */
+	.nav > li{
+		float: left;
+	}
+
+	.nav li ul{
+		display: none;
+		position: absolute;
+		min-width: 140px;
+	}
+
+	.nav li:hover > ul {
+		display: block;
+	}
+
+	#busqueda{
+		text-align: center;
+		float: left;
+		display: inline-block;
+	}
+
+</style>
+
+<body>
+	<div id="header">
+		<ul class="nav">
+			<li><a href="">Inicio</a></li>
+
+			<li><a href="">Act. Anteriores</a>
+				<ul style="margin-left: -40px">
+					<li><a href="Actividad1.html">Act 1</a></li>
+					<li><a href="Actividad2.html">Act 2</a></li>
+					<li><a href="Actividad3.html">Act 3</a></li>
+					<li><a href="Actividad4.html">Act 4</a></li>
+					<li><a href="Actividad5.html">Act 5</a></li>
+					<li><a href="Actividad6.html">Act 6</a></li>
+				</ul>
+			</li>
+
+			<li><a href="https://www.google.com/search?q=acerca+de&source=lmns&bih=750&biw=1536&client=firefox-b-d&hl=es-419&ved=2ahUKEwjqmcXV4fLnAhVPSawKHVR8DEkQ_AUoAHoECAEQAA">Acerca de</a></li>
+
+			<li><a href="https://www.google.com/search?client=firefox-b-d&bih=750&biw=1536&hl=es-419&sxsrf=ALeKk02cvFUxQd-irgs2z-elVBb9prLlNg%3A1582841928414&ei=SEBYXqL1GISIsQXK4bSYBA&q=contacto+&oq=contacto+&gs_l=psy-ab.3..0l10.19374.21016..21228...1.2..0.119.891.6j3......0....1..gws-wiz.....10..0i71j35i362i39j35i39j0i67j0i131j0i20i263j0i131i67.Q9-zauHirzE&ved=0ahUKEwiiuYPX4fLnAhUERKwKHcowDUMQ4dUDCAo&uact=5">Contacto</a></li>
+		</ul>
+	</div>
+	<header>
+		<br>
+		<h1>Gorillas</h1>
+	</header>
+
+<section id="main">
+	
+	<section id="seccion">
+		<p>
+		Los gorilas (género Gorilla) son primates herbívoros que habitan los bosques de África central. Son los más grandes de los primates vivos. Su ADN está compuesto de 3 041 976 159 pares de bases que codifican 20 962 genes proteicos compuestos de 237 216 exones.2​ Su ADN es un 97-98 % igual al humano, siendo el más cercano a este después de las dos especies de chimpancé. 
+		</p>	
+		<h3>Nombre</h3>
+		<p>
+		El físico y misionero estadounidense Thomas Staughton Savage fue el primero en describir el gorila occidental, al que llamó Troglodytes gorilla,3​ en 1847 a partir de especímenes obtenidos en Liberia.4​ El nombre es derivado de la palabra griega γόριλλαι (gorillai),5​ que designaba a una «tribu de mujeres peludas»,6​ pero también de hombres con cola de caballo que, portando antorchas, asaltaban los barcos, torturaban y violaban a las mujeres que los marineros les ofrecían, descrita por Hannón el Navegante.
+		</p>
+		<h3>Fisiologia</h3>
+		<p>
+		Los gorilas se desplazan generalmente a cuatro patas. Sus extremidades anteriores son más alargadas que las posteriores y se asemejan a brazos, aunque son utilizadas también como punto de apoyo al caminar. Los machos miden entre 1,65 y 1,75 m de altura, y pesan entre 140 y 200 kg. En algunos casos los machos llegan a medir más de dos metros, como Kumbuka, un gorila de un zoológico de Londres que mide 2,13 m y pesa alrededor de 200 kg. La hembra pesa aproximadamente la mitad que el macho. Aun así, un gorila obeso en cautividad ha alcanzado los 285 kg. La estructura facial del gorila se conoce como de «mandíbula protuberante», pues la mandíbula es mucho mayor que el maxilar.
+		</p>
+		</section>
+
+	<aside>
+		<div id="busqueda">
+			<form method="get" action="http://www.google.com/search">
+			<label><font face="Arial" size="4"><b><i>¿Qué desea buscar?</i></b></font></label><br><br>
+			<input type="text" name="q" size="31" maxlength="255" value=""><br><br>
+			<input type="submit" name="" value="Buscar">
+			</form>
+			<div align="center"><a href="javascript:enviar_formulario()" >Me siento con suerte</a></div>
+		</div>
+		<br>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/o0EBw3Ovmzc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</aside>
+
+</section>
+	<footer>
+		<p id="pie">
+            <br>
+			Sangabriel Montoya Carlos Daniel <br>
+			zS17002383
+		</p>
+	</footer>
+
+	<script>
+	document.getElementById("idButton").addEventListener("click",prevent);
+
+	function prevent()
+	{
+		var formulario = document.getElementById("my-form");	
+		var dato = formulario[0];
+		var input = dato.value;
+ 
+	if (dato.value==""){
+		alert("No se envía el formulario");
+		return false;
+	} else {
+		alert("Enviando formulario");
+		alert("Buscando: "+input);
+		formulario.submit();	
+		return true;
+	}
+
+	}
+
+</script>
+
+</body>
+</html>

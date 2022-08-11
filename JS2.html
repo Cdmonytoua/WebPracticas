@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="LOGO.ico">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="Css\Act2.css">
+	<title>JS 2</title>
+
+	<script>
+		function enviar_formulario(){
+			document.formulario.submit()
+			var formulario1 = document.getElementById("my-form");	
+			var dato = formulario1[0];
+			var input = dato.value;
+	 
+		if (dato.value==""){
+			alert("No se envía el formulario");
+			return false;
+		} else {
+			alert("Enviando formulario");
+			alert("Buscando: "+input);
+			formulario1.submit();	
+			return true;
+			}
+		}
+	</script>
+
+</head>
+
+<body>
+
+	<section id="main">
+	
+	<section id="seccion">
+		<p>
+		Los gorilas (género Gorilla) son primates herbívoros que habitan los bosques de África central. Son los más grandes de los primates vivos. Su ADN está compuesto de 3 041 976 159 pares de bases que codifican 20 962 genes proteicos compuestos de 237 216 exones.2​ Su ADN es un 97-98 % igual al humano, siendo el más cercano a este después de las dos especies de chimpancé. 
+		</p>	
+		<h3>Nombre</h3>
+		<p>
+		El físico y misionero estadounidense Thomas Staughton Savage fue el primero en describir el gorila occidental, al que llamó Troglodytes gorilla,3​ en 1847 a partir de especímenes obtenidos en Liberia.4​ El nombre es derivado de la palabra griega γόριλλαι (gorillai),5​ que designaba a una «tribu de mujeres peludas»,6​ pero también de hombres con cola de caballo que, portando antorchas, asaltaban los barcos, torturaban y violaban a las mujeres que los marineros les ofrecían, descrita por Hannón el Navegante.
+		</p>
+		<h3>Fisiologia</h3>
+		<p>
+		Los gorilas se desplazan generalmente a cuatro patas. Sus extremidades anteriores son más alargadas que las posteriores y se asemejan a brazos, aunque son utilizadas también como punto de apoyo al caminar. Los machos miden entre 1,65 y 1,75 m de altura, y pesan entre 140 y 200 kg. En algunos casos los machos llegan a medir más de dos metros, como Kumbuka, un gorila de un zoológico de Londres que mide 2,13 m y pesa alrededor de 200 kg. La hembra pesa aproximadamente la mitad que el macho. Aun así, un gorila obeso en cautividad ha alcanzado los 285 kg. La estructura facial del gorila se conoce como de «mandíbula protuberante», pues la mandíbula es mucho mayor que el maxilar.
+		</p>
+		</section>
+
+	<aside>
+		<img src="https://imgs.mongabay.com/wp-content/uploads/sites/20/2019/12/17100814/5-Silverback-mtn-gorilla-Uganda-Skyler-Bishop-for-Gorilla-Doctors-copy-2.jpg" WIDTH=200 HEIGHT=200>
+	</aside>
+
+</section>
+			<br><div align="center">
+			<form id="my-form" method="get" action="http://www.google.com/search" name="formulario">
+			<label><font face="Arial" size="4"><b><i>¿Qué desea buscar?</i></b></font></label><br><br>
+			<input type="text" id="idInput" name="q" size="31" maxlength="255" value="" placeholder="Escribe aquí">
+			<input type="submit" id="idButton" name="" value="Buscar">
+			</form>
+			</div>
+
+
+	<footer>
+		<p id="pie">
+            <br>
+			Sangabriel Montoya Carlos Daniel <br>
+			zS17002383
+		</p>
+	</footer>
+
+	<script>
+	document.getElementById("idButton").addEventListener("click",prevent);
+
+	function prevent()
+	{
+		var formulario = document.getElementById("my-form");	
+		var dato = formulario[0];
+		var input = dato.value;
+ 
+	if (dato.value==""){
+		alert("No se envía el formulario");
+		return false;
+	} else {
+		alert("Enviando formulario");
+		alert("Buscando: "+input);
+		formulario.submit();	
+		return true;
+	}
+
+	}
+
+</script>
+
+</body>
+</html>
