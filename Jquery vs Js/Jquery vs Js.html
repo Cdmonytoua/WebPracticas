@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="LOGO.ico">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="Jquery-mercado.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<title>Jquery vs Js</title>
+
+    <script>
+        
+    $(document).ready(function(){
+        
+        var m = 0;
+        
+      $("#prods").change(function(){
+        
+            $("#precio").text("Precio unitario :" + 
+            $("#prods").val());
+          
+            $("#t").text("Total :" + 
+            $("#cant").val() * $("#prods").val() );
+              
+      });
+     
+        $("#cant").change(function(){
+            
+            $("#t").text("Total :" + 
+            $("#cant").val() * $("#prods").val() );
+     });
+        
+      $("#b1").click(function(){
+        $("#renglon").after("<tr>"+
+                                "<th>"+ $("#prods option:selected").text()+"</th>" +
+                                "<th>"+ $("#prods").val()+"</th>" +
+                                "<th>"+ $("#cant").val() +"</th>"+
+                                "</tr>");
+          
+          
+          m =  m + $("#cant").val() * $("#prods").val();
+          $("#total").text("Total : " + m);
+          
+      });
+       
+         $("#b2").click(function(){ 
+             alert("Compra Finalizada");
+                location.reload();
+      });
+    
+    });
+                
+    </script>
+
+</head>
+
+<body>
+ 	<center><h1>Tienda D' Doña Pelos</h1></center>
+    
+	<aside>
+        <h2>Carrito de compras</h2>
+        <table>
+		<tr id="renglon">
+			<th>Producto</th>
+			<th>Precio</th>
+			<th>Cantidad</th>
+		</tr>
+        </table>
+        <br>
+        <p id="total"> </p>
+        
+        <button id="b2">Finalizar Compra</button>
+	</aside>
+	
+	<section id="seccion">
+
+		<select id="prods">
+			<optgroup label="---Sabritas---"></optgroup>
+			<option value="15" title="Sabrinas Originales">Sabrinas Originales</option>
+			<option value="15" title="Sabritas FlamitHot">Sabritas FlamitHot</option>
+			<option value="14" title="Doritos Queso">Doritos Queso</option>
+			<option value="14" title="Doritos Nacho">Doritos Nacho</option>
+			<option value="13" title="Cheetos">Cheetos</option>
+			<option value="16" title="Ruffles">Ruffles</option>
+			<option value="14" title="Fritos">Fritos</option>
+			<optgroup label="---Refrescos---"></optgroup>
+			<option value="30" title="Coca-Cola">Coca-Cola</option>
+			<option value="25" title="Pepsi">Pepsi</option>
+			<option value="25" title="Fanta">Fanta</option>
+			<option value="25" title="Fresca">Fresca</option>
+			<option value="20" title="Mirinda">Mirinda</option>
+			<option value="25" title="Manzanita">Manzanita</option>	
+			<option value="20" title="Sprite">Sprite</option>
+			<optgroup label="---Dulces---"></optgroup>
+			<option value="2" title="Pica Fresas">Pica Fresas</option>
+			<option value="1" title="Chicle Cloretts">Chicle Cloretts</option>
+			<option value="6" title="Mazapan">Mazapan</option>
+			<option value="6" title="Pulparindo">Pulparindo</option>
+			<option value="6" title="Duvalin">Duvalin</option>	
+			<option value="6" title="Nucita">Nucita</option>
+			<option value="6" title="Cremino">Cremino</option>
+		</select>
+        
+		<p id="precio"></p>
+
+		<div id="screen"><label>Cantidad:</label><br>
+		<input type="number" id="cant" value="1"><br>
+		</div>
+        <p id="t"></p>
+        <button id="b1">Agregar al carrito</button>
+	</section>
+
+
+
+
+	<footer>
+		<p id="pie">
+            <br><br>
+			Sangabriel Montoya Carlos Daniel <br>
+			zS17002383
+		</p>
+	</footer>
+
+</body>
+</html>

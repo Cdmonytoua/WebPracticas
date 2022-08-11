@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="LOGO.ico">
+	<meta charset="utf-8">
+	<title>Paint</title>
+    
+</head>
+
+    <style type="text/css">
+        
+        h1{
+            color: darkgreen;
+            text-align: center;
+        }
+        
+        canvas{
+            border: solid 2px;
+            background: #FFFFFF;
+            }
+        
+        img{
+            width: 100px;
+        }
+        
+        .herramientas div{
+            background-color: black;
+        }
+        
+        .herramientas div:hover{
+            border: solid red 2px;
+        }
+        
+        .herramientas img:hover{
+            border: solid red 2px;
+        }
+        
+        #pie{
+        color: darkgreen;
+	    clear: both;
+        min-height: 120px;
+        text-align: right;
+        word-wrap: break-word;
+        }   
+        
+    </style>
+    
+    <script>
+        var color = "#000000";
+        var t = 8;
+        var pintura = false;
+        
+        function pintar(event) {
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+            var x = event.clientX;
+            var y = event.clientY;
+            if(pintura){
+                ctx.fillStyle = color;
+                ctx.fillRect(x,y,t,t) ;
+            }
+        }
+        
+        function activar() {
+            pintura = true;
+        }
+        
+        function desactivar() {
+            pintura = false;
+        }
+        
+        function lapiz(){
+            color = document.getElementById("colores").value;
+            document.getElementById("colores").removeAttribute("disabled");
+        }
+        
+        function goma(){
+            color = "#FFFFFF";
+            document.getElementById("colores").setAttribute("disabled","");
+        }
+        
+        function pcolor(){
+            color = document.getElementById("colores").value;
+        }
+        
+        function tam(num){
+            t = num;
+        }
+        
+        function guardarimg(){
+            var canvas = document.getElementById("canvas");
+            var imagen = canvas.toDataURL("image/png");
+            this.href = imagen;
+        }
+        
+        function r(){
+            location.reload();
+        }
+        
+    </script>
+    
+<body bgcolor="fff7e9">
+    <h1>Paint with JS</h1>
+    <table>
+        <tr>
+            <td><canvas id="canvas" width="500" height="500" onmousemove="pintar(event);" onmousedown="activar();" onmouseup="desactivar()"></canvas> </td>
+            <td class="herramientas"> 
+                <a href="#" onclick="lapiz();"> <img src="lapiz.jpg"> </a>
+                <a href="#" onclick="goma();"> <img src="goma.jpg"> </a>
+                <br>
+                <br>
+                <div style="width: 10px; height: 10px" onclick="tam(10);"> </div> <br>
+                <div style="width: 20px; height: 20px" onclick="tam(20);"> </div> <br>
+                <div style="width: 30px; height: 30px" onclick="tam(30);"> </div> <br>
+                <div style="width: 40px; height: 40px" onclick="tam(40);"> </div> <br>
+                <input type="color" id="colores" onchange="pcolor();"/>
+                <br><br><a  style="color:darkgreen" href="#" download="imagen.png" id="guardarimagen"> Guardar como imagen </a>
+                <br><br><a  style="color: darkgreen" href="#" onclick="r();">Borrar Contenido</a>
+            </td>
+        </tr>
+    </table>
+    
+    <script> document.getElementById("guardarimagen").addEventListener("click", guardarimg, false); </script>
+    
+	<footer>
+		<p id="pie">
+            <br><br>
+			Sangabriel Montoya Carlos Daniel <br>
+			zS17002383
+		</p>
+	</footer>
+
+</body>
+</html>

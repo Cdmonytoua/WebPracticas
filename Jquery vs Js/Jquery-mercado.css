@@ -1,0 +1,26 @@
+body{
+    background: #f0f6b6;
+}
+
+#seccion{
+		width: 70%;
+		min-height: 200px;
+		margin: 10px;
+		
+		padding-bottom: 20px;
+	}
+
+	aside{
+		width: 30%;
+		float: right;
+		margin: 10px;
+	}
+
+	#pie{
+	    clear: both;
+        min-height: 120px;
+        
+        text-align: right;
+        word-wrap: break-word;
+        
+    }
